@@ -7,7 +7,8 @@
 # retrieve the inverse from the cache. ## Write a short comment describing this
 # function
 
-# Creates a matrix object with it's inverse.
+# Creates a mutable matrix object where the matrix itself and it's inverse can
+# be easily retrieved.
 makeCacheMatrix <- function( x = matrix() ) 
   {
   m <- NULL
@@ -30,7 +31,8 @@ makeCacheMatrix <- function( x = matrix() )
 }
 
 
-## Return a matrix that is the inverse of 'x'
+## Return a matrix that is the inverse of 'x'. Computes matrix with solve(x) function
+# if inverse matrix can't be already found in the cache.
 
 cacheSolve <- function(x, ...) {
   m <- x$getinverse()
